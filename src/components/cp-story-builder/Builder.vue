@@ -24,7 +24,7 @@
                     :disabled="gong === '' || shou === ''">
                 {{btnText}}
             </button>
-            <button disabled class="btn btn-info" @click="emailStory">投稿</button>
+            <button class="btn btn-info" @click="emailStory">投稿</button>
         </div>
         <div class="text-left ml-4 mr-4">
             <p id="story">{{ story }}</p>
@@ -32,13 +32,13 @@
         </div>
         <div class="m-2">
             <p class="mb-0 mt-4">
-                <small>文库更新于 2020.02.26 2:00PM</small><br>
+                <small>文库更新于 2020.04.17 5:00AM</small><br>
                 <small>已收录短打文段：{{availableStories.stories.length}}</small>
                 <small v-if="availableStories.specialCount>0">（包含{{availableStories.specialCount}}篇定制文）</small>
             </p>
             <p><small><strong>疫情期间大家要勤洗手多通风，好好照顾自己哦！</strong></small></p>
             <span class="badge badge-info">更新30篇</span>
-            <span class="badge badge-warning ml-2">关闭投稿</span>
+            <span class="badge badge-success ml-2">开放投稿</span>
         </div>
     </div>
 </template>
@@ -132,7 +132,7 @@
         return leaders.find(a => gong.includes(a)) !== undefined || leaders.find(a => shou.includes(a)) !== undefined;
       },
       emailStory: function () {
-        let c = 'mailto:mxhcpstories@yahoo.com?subject=投稿CP短打文&body=（请用\'<攻>\'和\'<受>\'注明故事的攻受，如果想投定制文的话请备注人物姓名哦！内容请勿超过50字。）';
+        let c = 'mailto:mxhcpstories@yahoo.com?subject=投稿CP短打文&body=（请用 <攻> 和 <受> 注明故事的攻受，如果想投定制文的话请备注人物姓名哦！内容请勿超过50字。）';
         window.open(c);
       },
       shuffle: function (array){
