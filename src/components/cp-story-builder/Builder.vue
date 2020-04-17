@@ -32,7 +32,7 @@
         </div>
         <div class="m-2">
             <p class="mb-0 mt-4">
-                <small>文库更新于 2020.04.17 5:00AM</small><br>
+                <small>文库更新于 2020.04.17 2:30PM</small><br>
                 <small>已收录短打文段：{{availableStories.stories.length}}</small>
                 <small v-if="availableStories.specialCount>0">（包含{{availableStories.specialCount}}篇定制文）</small>
             </p>
